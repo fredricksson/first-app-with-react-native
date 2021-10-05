@@ -22,7 +22,7 @@ const MyStack = () => {
           options={{ title: 'Welcome' }}
         />
         <Stack.Screen
-          name="Homce"
+          name="demo"
           component={ComponentsSreen}
           options={{ title: 'Welcome' }}
         />
