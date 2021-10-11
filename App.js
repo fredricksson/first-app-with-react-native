@@ -1,35 +1,27 @@
+// In App.js in a new project
+
 import * as React from 'react';
+import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ComponentsSreen from './src/screen/ComponentsSreen';
 import ListScreen from './src/screen/ListScreen'
-import HomeScreen from './src/screen/HomeScreen'
-const Stack = createNativeStackNavigator();
+import MyStack  from './stack';
+function HomeScreen({navigation}) {
+  
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button title="Home" onPress={() => navigation.navigate('ListScreen')}/>
+    </View>
+  );
+}
 
 
-const MyStack = () => {
+function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-      <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: 'Welcome' }}
-        />
-      <Stack.Screen
-          name="List"
-          component={ListScreen}
-          options={{ title: 'Welcome' }}
-        />
-        <Stack.Screen
-          name="demo"
-          component={ComponentsSreen}
-          options={{ title: 'Welcome' }}
-        />
-        
-      </Stack.Navigator>
-      
+      <MyStack/>
     </NavigationContainer>
   );
-};
-export default MyStack
+}
+
+export default App;

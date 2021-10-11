@@ -18,13 +18,13 @@ const ListScreen = () => {
                 renderItem={ ( { item } )=> {
         return <Text style={styles.textStyle}> {item.name} </Text>
     }}/>*/
-    return <FlatList
+    return <FlatList style={{flex: 1}}
             data={friends}
             renderItem={ ({item}) => {
                 return <Text> {item.name} - {item.age} </Text>
             }}
     />
-}
+    }
 
 const styles = StyleSheet.create({
     textStyle: { 
