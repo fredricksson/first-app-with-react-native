@@ -7,6 +7,7 @@ import ImageScreen from '../src/screen/ImageSreen'
 import CounterScreen from '../src/screen/CounterScreen'
 import ColorScreen from '../src/screen/ColorScreen'
 import SquareScreen from '../src/screen/SquareScreen'
+import TextScreen from '../src/screen/TextScreen'
 const Stack = createNativeStackNavigator();
 
 
@@ -48,7 +49,11 @@ const MyStack = () => {
           component={SquareScreen}
           options={{ title: 'Welcome' }}
         />
-        
+        <Stack.Screen
+          name="text"
+          component={TextScreen}
+          options={{ title: 'Welcome' }}
+        />
       </Stack.Navigator>
       
   );
